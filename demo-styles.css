@@ -5,6 +5,16 @@ body {
   color: #244376;
 }
 
+#top {
+  justify-content: center;
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  border-radius: 0px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
 
 #card {
   margin: 3em auto;
