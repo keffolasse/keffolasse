@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   max-width: 600px;
   border-radius: 0px;
+  border-style: dotted;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   overflow: hidden;
 }
