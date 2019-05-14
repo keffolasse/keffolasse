@@ -6,7 +6,7 @@ body {
 }
 
 #top {
-  justify-content: center;
+  justify-self: center;
   margin: 3em auto;
   display: flex;
   flex-direction: column;
