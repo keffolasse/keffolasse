@@ -48,21 +48,21 @@
 		       			var str = e.results[i][0].transcript;
 		       			console.log('Recognised: ' + str);
 		       			// If the user said 'video' then parse it further
-		       			if (userSaid(str, 'video')) {
+		       			if (userSaid(str, 'problem')) {
 		       				// Replay the video
-		       				if (userSaid(str, 'replay')) {
-		       					video.currentTime = 0;
+		       				if (userSaid(str, 'small')) {
+		       					video.currentTime = 45;
 		       					video.play();
 		       					highlightCommand('vidReplay');
 		       				}
 		       				// Play the video
-		       				else if (userSaid(str, 'play')) {
-		       					video.play();
+		       				else if (userSaid(str, 'big')) {
+								video.currentTime = 8;
 		       					highlightCommand('vidPlay');
 		       				}
 		       				// Stop the video
-		       				else if (userSaid(str, 'stop')) {
-		       					video.pause();
+		       				else if (userSaid(str, 'code')) {
+		       					video.currentTime = 75;
 		       					highlightCommand('vidStop');
 		       				}
 		       				// If the user said 'volume' then parse it even further
