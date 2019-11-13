@@ -2,7 +2,7 @@
 html, body {
 	background-color:#4500ff;
 	text-align:center;
-	font-family:verdana,sans-serif;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"sans-serif;
 }
 
 h1, p, button, ul {
@@ -31,7 +31,7 @@ li[data-state=highlight] {
 video {
 	display:block;
 	margin:0 auto;
-	border:5px solid #a62d00;
+	border:1px solid #000000;
 }
 
 button {
@@ -40,7 +40,7 @@ button {
 	margin-top:1em;
 	font-size:1em;
 	cursor:pointer;
-	background-color:#0a64a4;
+	background-color:#00000;
 	font-variant:small-caps;
 }
 button:hover {
