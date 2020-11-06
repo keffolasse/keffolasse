@@ -42,13 +42,14 @@
   <!-- All you need to put beautiful, interactive 3D content on your site: -->
 	  
   <model-viewer src="newbalanceblenderSized.glb"
-				ios-src="newbalance.usdz"
+				ar ar-modes="webxr scene-viewer quick-look"
+				ar-scale="auto"
+				camera-controls
 				poster="images/3dposter.jpg"
-                  alt="A 3D model of a product"
-                  background-color="#FFFFFF"
-                  shadow-intensity="2"
-                  camera-controls
-                  ar>
+                background-color="#FFFFFF"
+                shadow-intensity="2"
+				alt="A 3D model of a product"
+				ios-src="newbalance.usdz">
   </model-viewer>
 </div>
 <div id="bodytext">
