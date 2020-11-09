@@ -40,7 +40,7 @@
 	</div>
 <div id="card">
   <!-- All you need to put beautiful, interactive 3D content on your site: -->
-  <model-viewer id="model-viewer" src="boxmove.glb" ar ar-modes="webxr" ar-scale="auto" autoplay animation-name="Swirl"camera-controls ios-src="newbalance.usdz"></model-viewer>
+  <model-viewer id="model-viewer" src="boxmove.glb" ar ar-modes="webxr" ar-scale="auto" autoplay animation-name="Swirl" camera-controls ios-src="newbalance.usdz"></model-viewer>
 	<script>
   document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
     if(event.detail.status === 'failed'){
