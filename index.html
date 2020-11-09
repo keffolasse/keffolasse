@@ -40,8 +40,30 @@
 	</div>
 <div id="card">
   <!-- All you need to put beautiful, interactive 3D content on your site: -->
-  <model-viewer id="model-viewer" src="boxmove.glb" ar ar-modes="webxr" ar-scale="auto" autoplay animation-name="Swirl" camera-controls ios-src="newbalance.usdz"></model-viewer>
-	<script>
+	<model-viewer id="model-viewer" src="boxmove.glb" ar ar-modes="webxr" ar-scale="auto" autoplay animation-name="Swirl" camera-controls ios-src="newbalance.usdz">
+		<div id="controls">
+    		<button data-color="1,0,0,1">Red</button>
+  		</div>
+	</model-viewer>
+<script>
+const modelViewer = document.querySelector("model-viewer");
+
+document.querySelector('#controls').addEventListener('click', (event) => {
+  const colorString = event.target.dataset.color;
+
+  if (!colorString) {
+    return;
+  }
+
+  const color = colorString.split(',')
+      .map(numberString => parseFloat(numberString));
+
+  console.log('Changing color to: ', color);
+  const [material] = modelViewer.model.materials;
+  material.pbrMetallicRoughness.setBaseColorFactor(color);
+});
+</script>
+<script>
   document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
     if(event.detail.status === 'failed'){
       const error = document.querySelector("#error");
