@@ -35,6 +35,8 @@
   flex-direction: column;
   max-width: 600px;
   border-radius: 0px;
+	background-color: #DDDDDD;
+
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
