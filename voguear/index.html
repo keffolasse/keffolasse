@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+	<head>
     <title>WebAR-t3st</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,16 +24,15 @@
 
     <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
     <!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
-    
-  </head> 
+	</head> 
 <body>
+<div align="center" id="wrap">
 <div align="center" id="top">
-    <img src="images/ARtop.gif" width="100%" alt=""/>
+<img src="images/ARbottom.gif" width="100%" alt=""/>
 </div>
-
 <div id="card">
   <!-- All you need to put beautiful, interactive 3D content on your site: -->
-	<model-viewer id="model-viewer" src="dio.glb" ar ar-modes="webxr quick-look" ar-scale="auto" shadow-intensity="0,8" shadow-softness="0,8" environment-image="cayley.hdr" autoplay camera-controls ios-src="dio.usdz">
+	<model-viewer id="model-viewer" src="dio.glb" ar ar-modes="scene-viewer webxr quick-look" ar-scale="auto" exposure="2" shadow-intensity="0,8" shadow-softness="0,8" environment-image="cayley.hdr" autoplay camera-controls ios-src="dio.usdz">
 	 <!--<button onclick="playAnimation('Move','loop')" style="display: block;" class="hotspot-button hotspot-0 annotations_show" slot="hotspot-311020102033" data-position="-0.06583233873289211 1.675235680658444 0.5312583410454528" data-normal="-3.0534946175728854e-14 0.06185443159550054 0.9980851813808266"> 
 				            	<div id="annotation"><p>loop</p></div>
 				          	</button>
@@ -103,12 +102,8 @@ function playAnimation(animation_name,animation_type) {
 <div align="center" id="bottom">
     <img src="images/ARbottom.gif" width="100%" alt=""/>
 </div>
-
-
-
-
+</div>
 <!-- 💁 Include both scripts below to support all browsers! -->
-
 <!-- Loads <model-viewer> for modern browsers: -->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
