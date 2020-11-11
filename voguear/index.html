@@ -26,21 +26,21 @@
     <!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
 	</head> 
 <body>
-<div align="center" id="wrap">
 <div align="center" id="top">
-<img src="images/ARbottom.gif" width="100%" alt=""/>
+<img src="images/ARtop.gif" width="100%" alt="top"/>
 </div>
+
 <div id="card">
   <!-- All you need to put beautiful, interactive 3D content on your site: -->
-	<model-viewer id="model-viewer" src="dio.glb" ar ar-modes="scene-viewer webxr quick-look" ar-scale="auto" exposure="2" shadow-intensity="0,8" shadow-softness="0,8" environment-image="cayley.hdr" autoplay camera-controls ios-src="dio.usdz">
+<model-viewer id="model-viewer" src="dio.glb" ar ar-modes="scene-viewer webxr quick-look" ar-scale="auto" exposure="2" shadow-intensity="0,8" shadow-softness="0,8" environment-image="cayley.hdr" autoplay camera-controls ios-src="dio.usdz">
 	 <!--<button onclick="playAnimation('Move','loop')" style="display: block;" class="hotspot-button hotspot-0 annotations_show" slot="hotspot-311020102033" data-position="-0.06583233873289211 1.675235680658444 0.5312583410454528" data-normal="-3.0534946175728854e-14 0.06185443159550054 0.9980851813808266"> 
 				            	<div id="annotation"><p>loop</p></div>
 				          	</button>
 <button onclick="playAnimation('Spin','once')" style="display: block;" class="hotspot-button hotspot-0 annotations_show" slot="hotspot-311020102051" data-position="-0.8681001349615207 1.817890212010441 0.15671418199968132" data-normal="0.5529827444094486 0.4298258515866452 0.7137645421938595"> 
 				            	<div id="annotation"><p>once</p></div>
-				          	</button>-->
-</model-viewer>
-	
+				         </button>
+</model-viewer>-->
+</div>
 <script type="text/javascript">
 function playAnimation(animation_name,animation_type) {
   const modelViewer = document.querySelector("model-viewer");   
@@ -85,7 +85,6 @@ function playAnimation(animation_name,animation_type) {
 
 
 </script>	
-
 	
 <script>
   document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
@@ -98,10 +97,8 @@ function playAnimation(animation_name,animation_type) {
     }
   });
 </script>
-</div>
-<div align="center" id="bottom">
-    <img src="images/ARbottom.gif" width="100%" alt=""/>
-</div>
+<div align="center" id="top">
+    <img src="images/ARbottom.gif" width="100%" alt="bottom"/>
 </div>
 <!-- 💁 Include both scripts below to support all browsers! -->
 <!-- Loads <model-viewer> for modern browsers: -->
