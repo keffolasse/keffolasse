@@ -15,6 +15,11 @@ model-viewer {
   background-color: #ffffff;
 }
 
+ button[slot="hotspot-hand"]{
+    min-hotspot-opacity: 0;
+    background-color: red;
+  }
+
 .Hotspot {
   background: #fff;
   border-radius: 32px;
