@@ -20,6 +20,14 @@ model-viewer {
     background-color: red;
   }
 
+  #annotation{
+    background-color: #888888;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
 .Hotspot {
   background: #fff;
   border-radius: 32px;
