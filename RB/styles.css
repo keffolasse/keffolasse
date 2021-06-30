@@ -24,6 +24,7 @@ model-viewer {
     background: #FF0000;
     position: absolute;
     transform: translate(0px, 0px);
+    width: 120px;
     border-radius: 10px;
     padding: 10px;
     font-family: Futura, Helvetica Neue, sans-serif;
