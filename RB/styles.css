@@ -21,7 +21,7 @@ model-viewer {
   }
 
   #annotation{
-    background-color: #FF0000;
+    background: #FF0000;
     position: absolute;
     transform: translate(10px, 10px);
     border-radius: 10px;
