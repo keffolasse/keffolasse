@@ -21,15 +21,15 @@ model-viewer {
   }
 
   #annotation{
-    background: #FF0000;
+    background: #000000;
     position: absolute;
-    transform: translate(10px, 10px);
+    transform: translate(0px, 0px);
     border-radius: 10px;
     padding: 10px;
   }
 
 .Hotspot {
-  background: #fff;
+  background: #ff0000;
   border-radius: 32px;
   border: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
