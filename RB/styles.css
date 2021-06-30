@@ -16,8 +16,8 @@ model-viewer {
 }
 
  button[slot="hotspot-hand"]{
-    min-hotspot-opacity: 0;
-    background-color: red;
+    min-hotspot-opacity: 0.5;
+    background-color:  rgba(0, 1, 0, 0.75);
   }
 
   #annotation{
