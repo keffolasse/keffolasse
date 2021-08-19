@@ -11,17 +11,58 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="glassGlasses.glb" camera-controls autoplay animation-name="CubeAction" ar ar-scale=10 ar-modes="webxr scene-viewer quick-look">
-      <button class="Hotspot" slot="hotspot-1" data-position="-0.0m 0.5m 1m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Framtidsbrillor</div>
-      </button>
-		<!-- <button class="Hotspot" slot="hotspot-2" data-position="-0.7901122961207392m 1.729288281883961m 1.0623499304056168m" data-normal="0m 0m 1m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Kub</div>
-      </button> -->
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+    <model-viewer id="helmet" camera-controls src="testModel.glb" ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a helmet">
+    <div class="controls">
+      <div>
+        <p>Normals</p>
+        <select id="normals">
+          <option value="images/red.png">createAndApplyTexture</option>
+          <option value="images/blue.png">Blue</option>
+          <option value="images/green.png">Green</option>
+        </select>
       </div>
-    </model-viewer>
+      <div>
+        <p>Occlusion</p>
+        <select id="occlusion">
+          <option value="images/cross.png">Cross</option>
+          <option value="images/lines.png">Lines</option>
+        </select>
+      </div>
+      <div>
+        <p>Emission</p>
+        <select id="emission">
+          <option value="images/cross.png">Cross</option>
+          <option value="images/lines.png">Lines</option>
+        </select>
+      </div>
+    </div>
+  </model-viewer>
+  <script type="module">
+  const modelViewerTexture = document.querySelector("model-viewer#helmet");
+
+  modelViewerTexture.addEventListener("load", () => {
+
+    let material = modelViewerTexture.model.materials[0];
+
+    let createAndApplyTexture = async (channel, event) => {
+      let texture = await modelViewerTexture.createTexture(event.target.value);
+      material[channel].setTexture(texture);
+    }
+
+    document.querySelector('#normals').addEventListener('input', (event) => {
+      createAndApplyTexture('normalTexture', event);
+    });
+
+    document.querySelector('#occlusion').addEventListener('input', (event) => {
+      createAndApplyTexture('occlusionTexture', event);
+    });
+
+    document.querySelector('#emission').addEventListener('input', (event) => {
+      createAndApplyTexture('emissiveTexture', event);
+    });
+  });
+
+  </script>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
