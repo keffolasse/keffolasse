@@ -49,7 +49,7 @@
     }
 
     document.querySelector('#normals').addEventListener('input', (event) => {
-       applyPBRTexture('baseColorTexture', event);
+       createAndapplyTexture('imageTexture', event);
     });
 
     document.querySelector('#occlusion').addEventListener('input', (event) => {
