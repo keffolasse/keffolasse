@@ -43,13 +43,18 @@
 
     let material = modelViewerTexture.model.materials[2];
 
+    let createAndChangeTexture = async (channel, event) => {
+      let texture = await modelViewerTexture.createTexture(event.target.value);
+      // material[channel].setTexture(texture);
+      model.materials[2].pbrMetallicRoughness.baseColorTexture.texture.source.setURI('images/red.pmg');
+}
     let createAndApplyTexture = async (channel, event) => {
       let texture = await modelViewerTexture.createTexture(event.target.value);
       material[channel].setTexture(texture);
     }
 
     document.querySelector('#normals').addEventListener('input', (event) => {
-       baseColorTexture('normalTexture', event);
+       createAndChangeTexture('baseColorTexture', event);
     });
 
     document.querySelector('#occlusion').addEventListener('input', (event) => {
