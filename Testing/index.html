@@ -46,7 +46,7 @@
     let createAndChangeTexture = async (channel, event) => {
       let texture = await modelViewerTexture.createTexture(event.target.value);
       // material[channel].setTexture(texture);
-      modelViewerTexture.model.materials[2].pbrMetallicRoughness.baseColorTexture.texture.source.setURI('images/red.pmg');
+      modelViewerTexture.model.materials[2].pbrMetallicRoughness.baseColorTexture.texture.source.setURI('images/red.png');
 }
     let createAndApplyTexture = async (channel, event) => {
       let texture = await modelViewerTexture.createTexture(event.target.value);
