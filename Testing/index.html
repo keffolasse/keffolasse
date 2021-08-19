@@ -45,7 +45,7 @@
 
     let createAndApplyTexture = async (channel, event) => {
       let texture = await modelViewerTexture.createTexture(event.target.value);
-      material[channel].setTexture(texture);
+      default[channel].setTexture(texture);
     }
 
     document.querySelector('#normals').addEventListener('input', (event) => {
