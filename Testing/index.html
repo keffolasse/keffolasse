@@ -14,7 +14,7 @@
     <model-viewer id="helmet" camera-controls src="testModel.glb" ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a helmet">
     <div class="controls">
       <div>
-        <p>environmentImage</p>
+        <p>BaseColorTexture</p>
         <select id="normals">
           <option value="images/cayley.jpg">cayley</option>
           <option value="images/shoe1.jpg">Shoe1</option>
@@ -49,7 +49,7 @@
     }
 
     document.querySelector('#normals').addEventListener('input', (event) => {
-       modelViewerTexture('environmentImage', event);
+       applyPBRTexture('baseColorTexture', event);
     });
 
     document.querySelector('#occlusion').addEventListener('input', (event) => {
