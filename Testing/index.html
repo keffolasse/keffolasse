@@ -41,7 +41,7 @@
 
   modelViewerTexture.addEventListener("load", () => {
 
-    let material = modelViewerTexture.model.materials[0];
+    let material = modelViewerTexture.model.materials[2];
 
     let createAndApplyTexture = async (channel, event) => {
       let texture = await modelViewerTexture.createTexture(event.target.value);
