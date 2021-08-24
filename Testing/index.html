@@ -40,7 +40,7 @@
   const modelViewerTexture = document.querySelector("model-viewer#helmet");
 
   modelViewerTexture.addEventListener("load", () => {
-
+    modelViewer.activateAR();
     let material = modelViewerTexture.model.materials[2];
     let textur = modelViewerTexture.model.materials[2].pbrMetallicRoughness;
 
@@ -68,13 +68,6 @@
   });
 
   </script>
-
-  <script>
-var modelViewer = document.getElementById('model-viewer');
-modelViewer.addEventListener('load', function () {
-    modelViewer.activateAR();
-});
-</script>
 
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
