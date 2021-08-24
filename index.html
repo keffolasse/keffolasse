@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="demo-styles.css">
-    
+
     <!-- The following libraries and polyfills are recommended to maximize browser support -->
     <!-- NOTE: you must adjust the paths as appropriate for your project -->
-    
+
     <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 
@@ -24,8 +24,8 @@
 
     <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
     <!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
-    
-  </head> 
+
+  </head>
 <body>
 	<div align="center" id="top">
     <img src="logo.png" width="50%" alt=""/>
@@ -40,51 +40,51 @@
 	</div>
 <div id="card">
   <!-- All you need to put beautiful, interactive 3D content on your site: -->
-	<model-viewer id="model-viewer" src="newbalanceblenderSized.glb" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" skybox-image="voguear/images/ballroom_1k.hdr" environment-image="voguear/images/ballroom_1k.hdr" quick-look-browsers="safari chrome" autoplay camera-controls ios-src="newbalance.usdz">
-<!--	<button onclick="playAnimation('Move','loop')" style="display: block;" class="hotspot-button hotspot-0 annotations_show" slot="hotspot-311020102033" data-position="-0.06583233873289211 1.675235680658444 0.5312583410454528" data-normal="-3.0534946175728854e-14 0.06185443159550054 0.9980851813808266"> 
+	<model-viewer id="model-viewer" src="newbalanceblenderSized.glb" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto"  quick-look-browsers="safari chrome" autoplay camera-controls ios-src="newbalance.usdz">
+<!--	<button onclick="playAnimation('Move','loop')" style="display: block;" class="hotspot-button hotspot-0 annotations_show" slot="hotspot-311020102033" data-position="-0.06583233873289211 1.675235680658444 0.5312583410454528" data-normal="-3.0534946175728854e-14 0.06185443159550054 0.9980851813808266">
 				            	<div id="annotation"><p>loop</p></div>
 				          	</button>
-<button onclick="playAnimation('Spin','once')" style="display: block;" class="hotspot-button hotspot-0 annotations_show" slot="hotspot-311020102051" data-position="-0.8681001349615207 1.817890212010441 0.15671418199968132" data-normal="0.5529827444094486 0.4298258515866452 0.7137645421938595"> 
+<button onclick="playAnimation('Spin','once')" style="display: block;" class="hotspot-button hotspot-0 annotations_show" slot="hotspot-311020102051" data-position="-0.8681001349615207 1.817890212010441 0.15671418199968132" data-normal="0.5529827444094486 0.4298258515866452 0.7137645421938595">
 				            	<div id="annotation"><p>once</p></div>
 				          	</button>-->
 	</model-viewer>
-	
+
 <script type="text/javascript">
 function playAnimation(animation_name,animation_type) {
-  const modelViewer = document.querySelector("model-viewer");   
+  const modelViewer = document.querySelector("model-viewer");
   if (animation_type == 'once') {
-    modelViewer.animationName = animation_name; 
+    modelViewer.animationName = animation_name;
     modelViewer.currentTime = 0;
-    modelViewer.play(); 
+    modelViewer.play();
     var extremelySmallIntervalTime = 0.05;
     var j=0;
-    const interval = setInterval(function(){ 
+    const interval = setInterval(function(){
       //console.log(modelViewer.currentTime);
       if(modelViewer.currentTime > 0 && modelViewer.currentTime < (extremelySmallIntervalTime - 0.01))
       { ++j;
-        //console.log(j);      
+        //console.log(j);
         if ( j > 0 ){
          modelViewer.pause();
          //modelViewer.currentTime = 0;
          j = 0;
          clearInterval(interval);
         }
-        
+
       }else if(modelViewer.currentTime == 0)
       {
-        modelViewer.play(); 
+        modelViewer.play();
       }
     }, extremelySmallIntervalTime*1000);
   }else if(animation_type == 'loop'){
     if (animation_name != '') {
-      modelViewer.animationName = animation_name; 
-      modelViewer.play();  
-      if(modelViewer.currentTime == 1) { 
-        modelViewer.pause(); 
+      modelViewer.animationName = animation_name;
+      modelViewer.play();
+      if(modelViewer.currentTime == 1) {
+        modelViewer.pause();
         modelViewer.currentTime = 0;
       }
     }else{
-      modelViewer.pause();  
+      modelViewer.pause();
       modelViewer.currentTime = 1;
     }
 
@@ -92,9 +92,9 @@ function playAnimation(animation_name,animation_type) {
 }
 
 
-</script>	
+</script>
 
-	
+
 <script>
   document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
     if(event.detail.status === 'failed'){
