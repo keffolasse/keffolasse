@@ -11,11 +11,11 @@ body {
 
 model-viewer {
   background: url("images/snowback-png.png");
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 95%;
+  background-size: 100% 100%;
 }
 
  button[slot="hotspot-hand"]{
