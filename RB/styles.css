@@ -13,6 +13,7 @@ model-viewer {
   width: 90%;
   height: 90%;
   background: url("images/snowback-png.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
