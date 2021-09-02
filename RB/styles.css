@@ -14,7 +14,7 @@ model-viewer {
   height: 90%;
   background: url("images/snowback-png.png");
   background-repeat no-repeat;
-  background-size: auto;
+  background-size: 100%;
 }
 
  button[slot="hotspot-hand"]{
