@@ -132,7 +132,7 @@ model-viewer {
 }
 .center {
   display: block;
-  margin-left: auto;
+  margin-left: 100px;
   margin-right: auto;
 }
 
