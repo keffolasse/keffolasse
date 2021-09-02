@@ -138,7 +138,6 @@ model-viewer {
 }
 
 #ar-button {
-  background-image: url("images/ar_knapp.png");
   background-color: transparent;
   border: none;
   background-repeat: no-repeat;
