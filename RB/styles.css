@@ -130,6 +130,12 @@ model-viewer {
   float: left;
   transition: width 0.3s;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 #ar-button {
   background-image: url(ar_icon.png);
