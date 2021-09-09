@@ -11,13 +11,13 @@
   </head>
   <body>
 
-    <model-viewer src="gloves.glb" camera-controls disable-zoom autoplay ar ar-modes="scene-viewer webxr quick-look" shadow-intensity="2.9" shadow-softness="0.99" exposure="0.74" camera-target="0.005m 0.04m -0.055m" camera-orbit="176.2deg 93.85deg auto" style="background-color: unset;" ios-src="gloves.usdz">
+    <model-viewer src="gloves.glb" camera-controls disable-zoom autoplay ar ar-modes="scene-viewer webxr quick-look" shadow-intensity="2.9" shadow-softness="0.99" exposure="0.74" camera-target="0.005m 0.04m 0m" camera-orbit="176.2deg 93.85deg 1.7m" style="background-color: unset;" ios-src="gloves.usdz">
       <button slot="ar-button" id="ar-button" style="background-color: transparent; border: none; position:relative; top:70%;">
             <img src="images/ar_knapp.png" height="70%" width="70%">
         </button>
 
       <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+          <img src="images/ar_hand_prompt.png">
       </div>
     </model-viewer>
     <script src="script.js"></script>
