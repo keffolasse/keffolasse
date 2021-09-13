@@ -53,7 +53,8 @@ model-viewer {
   overflow-x: hidden; */
   position: absolute;
   z-index: -1;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 #demo {
