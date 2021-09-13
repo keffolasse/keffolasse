@@ -11,7 +11,7 @@ body {
 
 model-viewer {
   /* background: url("images/snowback-png.png"); */
-  /* width: 100%;
+  width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +44,6 @@ model-viewer {
 #demo {
   /* background-color: tomato;
   overflow-x: hidden; */
-  z-index:-999;
   position: absolute;
   width: 100%;
   height: 100%;
