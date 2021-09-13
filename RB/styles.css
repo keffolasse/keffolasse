@@ -41,6 +41,11 @@ model-viewer {
     color:#FFFFFF;
   }
 
+.demo: {
+  background-color: tomato;
+  overflow-x: hidden;"
+}
+
   /* #container {
     position: fixed;
     width: 100%;
