@@ -41,9 +41,10 @@ model-viewer {
     color:#FFFFFF;
   }
 
-.demo {
+#demo {
   /* background-color: tomato;
   overflow-x: hidden; */
+  position: fixed;
   width: 100%;
   height: 100%;
 }
