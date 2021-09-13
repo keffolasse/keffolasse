@@ -10,8 +10,11 @@
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
   <body>
-    <div id="demo">
-    </div>
+    <video autoplay muted loop id="myVideo">
+  <source src="video/rain.mp4" type="video/mp4">
+</video>
+    <!-- <div id="demo">
+    </div> -->
     <div id="model">
     <model-viewer src="gloves15_smallPlanes2.glb" camera-controls disable-zoom autoplay ar ar-modes="scene-viewer webxr quick-look" shadow-intensity="2.9" shadow-softness="0.99" exposure="0.74" camera-target="0.00m 0.14m 0m" camera-orbit="176.2deg 60deg 0.6m" style="background-color: unset;" ios-src="gloves.usdz">
       <button slot="ar-button" id="ar-button" style="background-color: transparent; border: none; position:relative; top:70%;">
