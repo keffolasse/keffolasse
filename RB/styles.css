@@ -79,6 +79,8 @@ model-viewer {
 #box {
     position: relative;
     z-index: 200;
+    left: 50%;
+    right: 50%;
     top: 70%;
     width: 300px;
     height: 30px;
