@@ -54,8 +54,8 @@ model-viewer {
     position: absolute;
     left: 10%;
     top: 10%;
-    width: 125;
-    height: 30;
+    width: 125px;
+    height: 30px;
 }
 
 #myVideo {
