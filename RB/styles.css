@@ -80,8 +80,6 @@ model-viewer {
     position: absolute;
     text-align: center;
     z-index: 200;
-    left: 50%;
-    right: 50%;
     top: 70%;
   }
 
