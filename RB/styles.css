@@ -51,6 +51,7 @@ model-viewer {
 #logo {
     position: absolute;
     z-index: 100;
+    position: absolute;
     left: 10%;
     top: 5%;
     width: 125px;
@@ -58,8 +59,9 @@ model-viewer {
 }
 
 #myVideo {
-  position: relative;
-  overflow: hidden;
+  /* background-color: tomato;
+  overflow-x: hidden; */
+  position: absolute;
   z-index: -1;
   min-width: 100%;
   min-height: 100%;
@@ -75,11 +77,11 @@ model-viewer {
 }
 
 #box {
-    position: relative;
+    position: absolute;
     text-align: center;
     z-index: 200;
     top: 70%;
-    width: 400px
+    width: 500px
   }
 
   /* #container {
