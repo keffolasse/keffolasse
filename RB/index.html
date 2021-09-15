@@ -12,13 +12,15 @@
     window.addEventListener('load', function () {
   const canActivateAR = document.querySelector("model-viewer").canActivateAR;
   console.log(canActivateAR);
+  if (canActivateAR "true") {
+    document.getElementById("cta").innerHTML = "true";
+      }
+  else {
+    document.getElementById("cta").innerHTML = "false";
+  }
 })
-if (canActivateAR "true") {
-  document.getElementById("cta").innerHTML = "true";
-    }
-else {
-  document.getElementById("cta").innerHTML = "False";
-}
+
+
 
 </script>
 
@@ -29,7 +31,7 @@ else {
 </video>
     <!-- <div id="demo">
     </div> -->
-    <div id="cta">It is 
+    <div id="cta">It is
     </div>
     <div id="model">
     <model-viewer src="gloves37.glb" camera-controls disable-zoom autoplay ar ar-modes="scene-viewer webxr quick-look" shadow-intensity="2.9" shadow-softness="0.99" exposure="0.74" camera-target="0.00m 0.2m 0m" camera-orbit="176.2deg 60deg 0.6m" style="background-color: unset;" ios-src="gloves37.usdz">
