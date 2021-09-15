@@ -8,6 +8,13 @@
     <link type="text/css" href="styles.css" rel="stylesheet"/>
 
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <script>
+    window.addEventListener('load', function () {
+  const canActivateAR = document.querySelector("model-viewer").canActivateAR;
+  console.log(canActivateAR);
+})
+</script>
+
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
