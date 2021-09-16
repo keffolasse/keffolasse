@@ -79,8 +79,9 @@ model-viewer {
     position: absolute;
     text-align: center;
     z-index: 200;
-    top: 70%;
-    width: 400px
+    top: 60%;
+    width: 70%;
+    height: 70%;
   }
 
   /* #container {
