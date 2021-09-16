@@ -83,7 +83,7 @@ model-viewer {
   position: absolute;
   z-index: 200;
   display: block;
-left: 30%;
+left: 20%;
 top:60%;
   width: 60%;
 }
