@@ -78,8 +78,8 @@ model-viewer {
 #cta {
   z-index: 100;
     /* margin: 40% 0% 0% 30%; */
-  /* margin-left: auto;
-  margin-right: auto; */
+  margin-left: auto;
+  margin-right: auto;
   }
 
 #noar {
