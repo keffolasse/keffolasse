@@ -75,21 +75,22 @@ model-viewer {
   height: 100%;
 }
 
-#noar {
-  display: block;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #cta {
-  position: absolute;
+
   display: block;
   z-index: 100;
   top: 60%;
   margin-left: auto;
   margin-right: auto;
   }
+
+#noar {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
   /* #container {
     position: fixed;
