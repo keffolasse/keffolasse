@@ -13,7 +13,7 @@
   const canActivateAR = document.querySelector("model-viewer").canActivateAR;
   console.log(canActivateAR);
   if (canActivateAR === false) {
-document.getElementById("cta").innerHTML = "<img src='images/noARmessage.png'>";
+document.getElementById("cta").innerHTML = "<img id='noar' src='images/noARmessage.png'>";
 }
 
 })
@@ -36,7 +36,7 @@ document.getElementById("cta").innerHTML = "<img src='images/noARmessage.png'>";
 <source src="video/snowfall_placeholder_h264.mp4" type="video/mp4">
 </video>
   <img id="logo" src="images/RB_logo.png">
-  <p id="box"><span></span><span id="cta"></span></p>
+  <span id="cta"></span>
 </div>
     </model-viewer>
   </div>
