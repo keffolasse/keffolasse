@@ -76,6 +76,7 @@ model-viewer {
 }
 
 #box {
+  position: absolute;
   display: block;
   margin-left: auto;
   margin-right: auto;
