@@ -77,6 +77,7 @@ model-viewer {
 
 #cta {
   z-index: 100;
+  display: flex;
     /* margin: 40% 0% 0% 30%; */
   /* margin-left: auto;
   margin-right: auto; */
