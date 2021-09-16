@@ -77,17 +77,17 @@ model-viewer {
 
 #noar {
   display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #cta {
   position: absolute;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   z-index: 100;
   top: 60%;
-  width: 50%;
-  height: 50%;
+
   }
 
   /* #container {
