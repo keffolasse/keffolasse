@@ -76,13 +76,13 @@ model-viewer {
 }
 
 #cta {
+  }
+
+#noar {
   z-index: 100;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  }
-
-#noar {
 }
 
 
