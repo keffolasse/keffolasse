@@ -5,7 +5,9 @@
 		<meta charset="utf-8" />
 		<title>EasyQRCodeJS Demo</title>
 		<script src="js/easy.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
-
+		<Script>
+				document.getElementById('page-url').href = document.URL
+		</script>
 		<style type="text/css">
 			body{
 				margin: 0;
@@ -86,7 +88,7 @@
 
 				{
 					config: {
-						text: "www.rb.se",
+						text: 'page-url',
 						width: 240,
 						height: 240,
 						quietZone: 0,
