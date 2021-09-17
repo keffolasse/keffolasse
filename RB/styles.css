@@ -90,6 +90,7 @@ align-content: center;
   display: block;
   width: 70%;
   min-width: 300px;
+  max-width: 150%;
   margin-right: auto;
   margin-left: auto;
   /* position: absolute;
