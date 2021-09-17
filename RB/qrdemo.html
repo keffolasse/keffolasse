@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>EasyQRCodeJS Demo</title>
+		<script src="js/easy.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+
+			#header{
+				text-align: left;
+				margin: 0;
+				line-height: 80px;
+				background-color: #007bff;
+				color: #fff;
+				padding-left: 20px;
+				font-size: 36px;
+			}
+
+			#header a{color: #FFFF00;}
+			#header a:hover{color: #FF9933;}
+			#container {
+				width: 1030px;
+				margin: 10px auto;
+			}
+
+			.imgblock {
+				margin: 10px 0;
+				text-align: center;
+				float: left;
+				min-height: 300px;
+			}
+
+			.qr table {
+
+			}
+
+			.title {
+				font-size: 15px;
+				font-weight: bold;
+				color: #fff;
+				text-align: center;
+				width: 330px;
+				margin: 10px 5px;
+				height: 60px;
+				background-color: #0084C6;
+				line-height: 60px;
+			}
+
+			#footer {
+				margin-top: 20px;
+				border-top: 1px solid gainsboro;
+				line-height: 40px;
+				clear: both;
+				text-align: center;
+			}
+
+			#footer a {
+				color: #0084C6;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+
+		<div id="container">
+		</div>
+
+	</body>
+
+</html>
+<script type="text/template" id="qrcodeTpl">
+			<div class="imgblock">
+				<div class="qr" id="qrcode_{i}"></div>
+			</div>
+		</script>
+		<script type="text/javascript">
+			var demoParams = [
+
+				{
+					config: {
+						text: "www.easyproject.cn/donation",
+						width: 240,
+						height: 240,
+						quietZone: 0,
+						colorDark: "#000000",
+						colorLight: "#ffffff",
+
+						//PI: '#f55066',
+
+						correctLevel: QRCode.CorrectLevel.H // L, M, Q, H
+					}
+				}
+
+
+
+			]
+
+
+
+			var qrcodeTpl = document.getElementById("qrcodeTpl").innerHTML;
+			var container = document.getElementById('container');
+
+			for (var i = 0; i < demoParams.length; i++) {
+				var qrcodeHTML = qrcodeTpl.replace(/\{title\}/, demoParams[i].title).replace(/{i}/, i);
+				container.innerHTML+=qrcodeHTML;
+			}
+			for (var i = 0; i < demoParams.length; i++) {
+				 var t=new QRCode(document.getElementById("qrcode_"+i), demoParams[i].config);
+			}
+		</script>
