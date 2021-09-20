@@ -6,9 +6,9 @@
 		<title>EasyQRCodeJS Demo</title>
 		<script src="js/easy.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
 		<Script>
-		var page-url
+		var page_url
 		window.addEventListener('load', function () {
-				document.getElementById(page-url).href = document.URL
+				document.getElementById(page_url).href = document.URL
 			})
 		</script>
 		<style type="text/css">
@@ -91,7 +91,7 @@
 
 				{
 					config: {
-						text: 'page-url',
+						text: 'page_url',
 						width: 240,
 						height: 240,
 						quietZone: 0,
@@ -119,7 +119,7 @@
 			}
 			for (var i = 0; i < demoParams.length; i++) {
 				 var t=new QRCode(document.getElementById("qrcode_"+i), demoParams[i].config);
-				 console.log(page-url);
+				 console.log(page_url);
 
 			}
 		</script>
