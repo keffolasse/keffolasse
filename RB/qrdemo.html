@@ -11,6 +11,11 @@
 				document.getElementById(page_url).href = document.URL
 			})
 		</script>
+		<script type="text/javascript">
+window.onload = function(){
+    document.getElementById("link").href = window.location.toString();
+}
+</script>
 		<style type="text/css">
 			body{
 				margin: 0;
@@ -73,6 +78,7 @@
 	</head>
 
 	<body>
+		<a href="#" id="link" target="_blank">Link</a>
 
 
 		<div id="container">
