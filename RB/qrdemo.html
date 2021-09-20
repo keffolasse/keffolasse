@@ -8,7 +8,7 @@
 		<Script>
 		var page-url
 		window.addEventListener('load', function () {
-				document.getElementById('page-url').href = document.URL
+				document.getElementById(page-url).href = document.URL
 			})
 		</script>
 		<style type="text/css">
@@ -119,7 +119,7 @@
 			}
 			for (var i = 0; i < demoParams.length; i++) {
 				 var t=new QRCode(document.getElementById("qrcode_"+i), demoParams[i].config);
-				 console.log('page-url');
+				 console.log(page-url);
 
 			}
 		</script>
