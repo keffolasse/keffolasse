@@ -64,7 +64,10 @@
 
     if (!emissionString) {
       return;
+      console.log('no string');
+
     }
+
     const emission = emissionString.split(',')
     .map(numberString => parseFloat(numberString));
     const [material] = modelViewerEmission.model.materials;
