@@ -16,10 +16,17 @@
     <div id="model">
       <model-viewer id="sphere" camera-controls interaction-prompt="none" src="reflective-sphere.gltf" ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a sphere">
     <div class="controls">
-      <div>
+      <div class="controls" ,="" id="emission-value">
+          <button data-color="1,0,0,1">Red</button>
+          <button data-color="0,1,0,1">Green</button>
+          <button data-color="0,0,1,1">Blue</button>
+        </div>
+
+      <!-- <div>
         <p>Emission: <span id="emission-value"></span></p>
         <input id="emission" type="range" min="0" max="1" step="0.01" value="1">
-      </div>
+      </div> -->
+
       <!-- <div>
         <p>Roughness: <span id="roughness-value"></span></p>
         <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
@@ -53,7 +60,7 @@
   <script>
   const modelViewerEmission = document.querySelector("model-viewer#sphere");
 
-  document.querySelector('#emission-value').addEventListener('input', (event) => {
+  document.querySelector('#emission-value').addEventListener('click', (event) => {
     const colorString = event.target.dataset.emission;
 
     if (!colorString) {
