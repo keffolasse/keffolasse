@@ -28,35 +28,35 @@
   </model-viewer>
 
   <!-- ----------------------------------------------------------- -->
-  <!-- <script>
+  <script>
   const modelViewerParameters = document.querySelector("model-viewer#sphere");
 
   modelViewerParameters.addEventListener("load", (ev) => {
 
     let material = modelViewerParameters.model.materials[0];
 
-    let metalnessDisplay = document.querySelector("#metalness-value");
-    let roughnessDisplay = document.querySelector("#roughness-value");
+    let emissiveDisplay = document.querySelector("#emission-value");
+    // let roughnessDisplay = document.querySelector("#roughness-value");
 
-    metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
-    roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
+    emissiveDisplay.textContent = material.pbrMetallicRoughness.emissiveFactor;
+    // roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
 
     // Defaults to gold
     material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
 
-    document.querySelector('#metalness').addEventListener('input', (event) => {
-      material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
-      metalnessDisplay.textContent = event.target.value;
+    document.querySelector('#emission').addEventListener('input', (event) => {
+      material.pbrMetallicRoughness.setEmissiveFactor(event.target.value);
+      emissiveDisplay.textContent = event.target.value;
     });
 
-    document.querySelector('#roughness').addEventListener('input', (event) => {
-      material.pbrMetallicRoughness.setRoughnessFactor(event.target.value);
-      roughnessDisplay.textContent = event.target.value;
-    });
+    // document.querySelector('#roughness').addEventListener('input', (event) => {
+    //   material.pbrMetallicRoughness.setRoughnessFactor(event.target.value);
+    //   roughnessDisplay.textContent = event.target.value;
+    // });
   })
-  </script> -->
+  </script>
 <!-- ---------------------------------------------------------- -->
-  <script>
+  <!-- <script>
   const modelViewerEmission = document.querySelector("model-viewer#sphere");
 
   document.querySelector('#emission-value').addEventListener('input', (event) => {
@@ -74,7 +74,7 @@
     material.pbrMetallicRoughness.setEmissiveFactor(emission);
     	console.log(emission);
   });
-  </script>
+  </script> -->
 <!-- ----------------------------------------------------------   -->
   </div>
     <script src="script.js"></script>
