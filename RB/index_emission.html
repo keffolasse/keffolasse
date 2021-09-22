@@ -61,7 +61,7 @@
 
   document.querySelector('#emission-value').addEventListener('click', (event) => {
     const emissionString = event.target.dataset.emission;
-
+console.log('Changing color to: ', emission);
     if (!emissionString) {
       return;
     }
@@ -69,7 +69,6 @@
     const emission = emissionString.split(',')
         .map(numberString => parseFloat(numberString));
 
-    console.log('Changing color to: ', emission);
     const [material] = modelViewerEmission.model.materials;
     material.pbrMetallicRoughness.setEmissiveFactor(emission);
   });
