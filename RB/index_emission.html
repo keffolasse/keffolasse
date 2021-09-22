@@ -70,6 +70,7 @@
     const emission = emissionString.split(',')
     .map(numberString => parseFloat(numberString));
     const [material] = modelViewerEmission.model.materials;
+    console.log('almost');
     material.pbrMetallicRoughness.setEmissiveFactor(emission);
     console.log('Changing color to: ', emission);
   });
