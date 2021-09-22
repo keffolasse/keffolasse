@@ -60,9 +60,9 @@
   const modelViewerEmission = document.querySelector("model-viewer#sphere");
 
   document.querySelector('#emission-value').addEventListener('click', (event) => {
-    const colorString = event.target.dataset.emission;
+    const emissionString = event.target.dataset.emission;
 
-    if (!colorString) {
+    if (!emissionString) {
       return;
     }
 
