@@ -45,9 +45,9 @@
 
     emissiveDisplay.textContent = material.pbrMetallicRoughness.emissiveFactor;
 
-
     // Defaults to gold
     material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
+  }
 
     document.querySelector('#emission').addEventListener('input', (event) => {
       material.pbrMetallicRoughness.setEmissiveFactor(event.target.value);
