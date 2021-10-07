@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="styles.css" rel="stylesheet"/>
+
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <script>
+    window.addEventListener('load', function () {
+  const canActivateAR = document.querySelector("model-viewer").canActivateAR;
+  console.log(canActivateAR);
+  if (canActivateAR === false) {
+document.getElementById("cta").innerHTML = "<img id='noar' src='images/noARmessage_text.png'>";
+}
+
+})
+</script>
+
+</head>
+<body>
+
+<div>
+    <div id="model">
+    <model-viewer src="sweater.glb" camera-controls autoplay ar ar-modes="scene-viewer webxr quick-look" shadow-intensity="2.9" shadow-softness="0.99" exposure="0.74" camera-target="0.00m 0.2m 0m" camera-orbit="176.2deg 60deg 0.6m" style="background-color: unset;" ios-src="sweater.usdz">
+      <button slot="ar-button" id="ar-button" style="background-color: transparent; border: none; position:relative; top:80%;">
+            <img src="images/ar_knapp.png" height="70%" width="70%">
+      </button>
+        <div>
+          <img id="logo" src="images/RB_logo.png">
+        </div>
+    </model-viewer>
+    </div>
+</div>
+<div id="cta">
+</div>
+<video autoplay muted loop id="myVideo">
+<source src="video/snowfall_placeholder_h264.mp4" type="video/mp4">
+</video>
+</script>
+    <script src="script.js"></script>
+    <script type="module" src="lottiescript.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
