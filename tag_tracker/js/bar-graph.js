@@ -68,6 +68,9 @@ export function updateBarGraph(data) {
         barElement.value = probability;
         // set the percent value on the label
         percentElement.innerText = convertToPercent(probability);
+        if probability = 100 {
+            window.open("www.youraddress.com","_self");
+    };
     });
 }
 
