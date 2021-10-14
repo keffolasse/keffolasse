@@ -68,7 +68,7 @@ export function updateBarGraph(data) {
         barElement.value = probability;
         // set the percent value on the label
         percentElement.innerText = convertToPercent(probability);
-        if (probability === 1) {
+        if (probability > 0.9) {
             window.open("www.youraddress.com","_self");
             console.log("Skickar till URL!");
     };
