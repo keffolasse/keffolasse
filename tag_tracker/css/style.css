@@ -43,8 +43,8 @@ h2 {
     line-height: 22px;
 }
 #webcam-wrapper {
-    width: var(--box-size);
-    height: var(--box-size);
+    width: var(300);
+    height: var(300);
     background-color: var(--gray);
     border-radius: 4px;
     overflow: hidden;
