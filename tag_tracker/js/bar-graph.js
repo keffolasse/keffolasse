@@ -70,6 +70,7 @@ export function updateBarGraph(data) {
         percentElement.innerText = convertToPercent(probability);
         if (probability = 100) {
             window.open("www.youraddress.com","_self");
+            console.log("Skickar till URL!");
     };
     });
 }
