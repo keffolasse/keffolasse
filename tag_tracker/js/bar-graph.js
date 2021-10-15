@@ -72,9 +72,8 @@ export function updateBarGraph(data) {
             console.log("Over09");
             function myFunction (){
               myVar = setTimeout(function() {
-
             console.log("Skickar till URL!");
-            }, 1000);  
+            }, 10);  
         }
 
     };
