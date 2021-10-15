@@ -71,6 +71,11 @@ export function updateBarGraph(data) {
         if (probability > 0.9) {
             console.log("Over09");
             myFunction();
+
+            }
+            else {
+              myVar = 0;
+            }
     };
     });
 }
@@ -78,7 +83,7 @@ export function updateBarGraph(data) {
 function myFunction(){
     var myVar;
   console.log("aktiv");
-  myVar = setTimeout(function() { console.log("Skickar till URL!") }, 1000);
+  myVar = setTimeout(function() { console.log("Skickar till URL!") }, 5000);
 }
 // This function converts a decimal number (between 0 and 1)
 // to an integer percent (between 0% and 100%)
