@@ -68,15 +68,16 @@ export function updateBarGraph(data) {
         barElement.value = probability;
         // set the percent value on the label
         percentElement.innerText = convertToPercent(probability);
-        if (probability > 0.9) {
-            console.log("Over09");
-            myFunction();
-            }
-        else {
-            myStopFunction();
-            }
-    }
+    };
   });
+  if (probability > 0.9) {
+      console.log("Over09");
+      myFunction();
+      }
+  else {
+    console.log("stop");
+      myStopFunction();
+      }
 }
 
 var myVar;
@@ -85,7 +86,7 @@ function myFunction(){
   myVar = setTimeout(function() { console.log("Skickar till URL!") }, 5000);
 }
 
-function myStopFunction() {
+function myStopFunction(){
   clearTimeout(myVar);
 }
 // This function converts a decimal number (between 0 and 1)
