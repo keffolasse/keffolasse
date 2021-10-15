@@ -71,7 +71,7 @@ export function updateBarGraph(data) {
         if (probability > 0.9) {
             console.log("Over09");
             var myVar;
-            function myFunction (){
+            function myFunction(){
               console.log("aktiv");
               myVar = setTimeout(function() {
             console.log("Skickar till URL!");
