@@ -70,8 +70,10 @@ export function updateBarGraph(data) {
         percentElement.innerText = convertToPercent(probability);
         if (probability > 0.9) {
             myFunction();
+          }
     });
 }
+
 
 var myVar;
 function myFunction(){
