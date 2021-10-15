@@ -75,6 +75,7 @@ export function updateBarGraph(data) {
           else if probability < 0.9 {
             console.log("stoppar");
             myVar = 0;
+            myStopFunction();
           }
     });
 }
