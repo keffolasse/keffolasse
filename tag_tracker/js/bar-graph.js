@@ -75,7 +75,10 @@ export function updateBarGraph(data) {
             console.log("Skickar till URL!");
           }, 1);
             // cancel it immediately so it will never run
-            clearTimeout(timer);
+            else {
+                    clearTimeout(timer);
+            }
+
     };
     });
 }
