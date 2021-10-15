@@ -71,6 +71,9 @@ export function updateBarGraph(data) {
         if (probability > 0.9) {
             myFunction();
           }
+          else {
+            myStopFunction();
+          }
     });
 }
 
