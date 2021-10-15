@@ -70,15 +70,15 @@ export function updateBarGraph(data) {
         percentElement.innerText = convertToPercent(probability);
         if (probability > 0.9) {
             console.log("Over09");
-          let timer = setTimeout(function() {
+          let timer = setTimeout(linkFunction() {
             // window.open("https://www.ikea.com/se/sv/p/svampmal-paslakan-2-oerngott-moerkgroen-vit-30500751/","_self");
-            console.log("Skickar till URL!");
-          }, 1);
-        }
-            // cancel it immediately so it will never run
-            else {
-                    clearTimeout(timer);
+          console.log("Skickar till URL!");
+          }, 1000);}
+          else {function myStopFunction() {
+            clearTimeout(timer);
+              }
             }
+        }
 
     };
     });
