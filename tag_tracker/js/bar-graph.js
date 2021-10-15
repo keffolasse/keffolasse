@@ -72,6 +72,7 @@ export function updateBarGraph(data) {
             myFunction();
           }
           else {
+            console.log("stoppar");
             myStopFunction();
           }
     });
@@ -83,7 +84,6 @@ function myFunction(){
   console.log("aktiv");
   myVar = setTimeout(function() { console.log("Skickar till URL!") }, 5000);
 }
-
 function myStopFunction(){
   console.log("stoppar");
   clearTimeout(myVar);
