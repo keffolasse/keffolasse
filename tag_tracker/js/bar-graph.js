@@ -85,6 +85,7 @@ function myFunction(){
 }
 
 function myStopFunction(){
+  console.log("stoppar");
   clearTimeout(myVar);
 }
 // This function converts a decimal number (between 0 and 1)
