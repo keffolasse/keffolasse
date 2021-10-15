@@ -70,8 +70,9 @@ export function updateBarGraph(data) {
         percentElement.innerText = convertToPercent(probability);
         if (probability > 0.9) {
             console.log("Over09");
-            let timer = setTimeout(linkFunction() {
-            
+            function myFunction (){
+              myVar = setTimeout(linkFunction() {
+
             console.log("Skickar till URL!");
             }, 1000);
             }
