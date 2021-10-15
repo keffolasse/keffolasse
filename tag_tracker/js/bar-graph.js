@@ -70,14 +70,6 @@ export function updateBarGraph(data) {
         percentElement.innerText = convertToPercent(probability);
     };
   });
-  if (probability > 0.9) {
-      console.log("Over09");
-      myFunction();
-      }
-  else {
-    console.log("stop");
-      myStopFunction();
-      }
 }
 
 var myVar;
