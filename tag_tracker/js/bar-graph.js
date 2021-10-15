@@ -72,11 +72,11 @@ export function updateBarGraph(data) {
             console.log("Over09");
             myFunction();
             }
-            else {
+        else {
             myStopFunction();
             }
-    };
-    });
+    }
+  });
 }
 
 var myVar;
