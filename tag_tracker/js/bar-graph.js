@@ -71,8 +71,8 @@ export function updateBarGraph(data) {
         if (probability > 0.9) {
             console.log("Over09");
           let timer = setTimeout(linkFunction() {
-            // window.open("https://www.ikea.com/se/sv/p/svampmal-paslakan-2-oerngott-moerkgroen-vit-30500751/","_self");
-          console.log("Skickar till URL!");
+            
+            console.log("Skickar till URL!");
           }, 1000);}
           else {function myStopFunction() {
             clearTimeout(timer);
