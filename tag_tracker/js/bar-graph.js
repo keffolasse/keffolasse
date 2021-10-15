@@ -74,7 +74,7 @@ export function updateBarGraph(data) {
           }
           else {
             console.log("stoppar");
-            myStopFunction();
+            myVar = 0;
           }
     });
 }
