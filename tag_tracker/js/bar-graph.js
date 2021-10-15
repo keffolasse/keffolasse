@@ -68,9 +68,13 @@ export function updateBarGraph(data) {
         barElement.value = probability;
         // set the percent value on the label
         percentElement.innerText = convertToPercent(probability);
-        if (probability > 99) {
-            window.open("https://www.ikea.com/se/sv/p/svampmal-paslakan-2-oerngott-moerkgroen-vit-30500751/","_self");
+        if (probability > 0.99) {
+          let timer = setTimeout(function() {
+            // window.open("https://www.ikea.com/se/sv/p/svampmal-paslakan-2-oerngott-moerkgroen-vit-30500751/","_self");
             console.log("Skickar till URL!");
+              }, 1000);
+            // cancel it immediately so it will never run
+            clearTimeout(timer);
     };
     });
 }
