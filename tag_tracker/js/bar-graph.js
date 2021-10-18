@@ -84,7 +84,7 @@ export function updateBarGraph(data) {
 
 
 var myVar;
-var urlName;
+var urlName ="";
 function myFunction(){
   myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
 }
