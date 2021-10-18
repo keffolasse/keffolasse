@@ -83,6 +83,7 @@ export function updateBarGraph(data) {
 
 
 var myVar;
+var urlName;
 function myFunction(){
   console.log("aktiv");
   myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
