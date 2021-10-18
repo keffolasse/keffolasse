@@ -61,7 +61,7 @@ export function updateBarGraph(data) {
     // iterate through each element in the data
     data.forEach(({ className, probability }) => {
         // get the HTML elements that we stored in the makeBar function
-        var urlName = [className];
+        let urlName = [className];
         let barElements = bars[className];
         let barElement = barElements.bar;
         let percentElement = barElements.percent;
@@ -71,6 +71,7 @@ export function updateBarGraph(data) {
         percentElement.innerText = convertToPercent(probability);
         console.log(myVar);
         if (probability > 0.9) {
+            let urlName = [className];
             myFunction();
           }
           else if (probability < 0.9) {
@@ -85,7 +86,6 @@ export function updateBarGraph(data) {
 var myVar;
 var urlName;
 function myFunction(){
-  console.log("aktiv" + urlName);
   myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
 }
 function myStopFunction(){
