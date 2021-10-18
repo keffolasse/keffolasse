@@ -84,7 +84,7 @@ export function updateBarGraph(data) {
 var myVar;
 function myFunction(){
   console.log("aktiv");
-  myVar = setTimeout(function() { console.log("Skickar till URL!", className) }, 1000);
+  myVar = setTimeout(function() { console.log("Skickar till URL!", probability) }, 1000);
 }
 function myStopFunction(){
   clearTimeout(myVar);
