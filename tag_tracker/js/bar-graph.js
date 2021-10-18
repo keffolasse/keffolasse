@@ -71,7 +71,7 @@ export function updateBarGraph(data) {
         percentElement.innerText = convertToPercent(probability);
         console.log(myVar);
         if (probability > 0.9) {
-            let urlName = [className];
+            urlName = className;
             myFunction();
           }
           else if (probability < 0.9) {
