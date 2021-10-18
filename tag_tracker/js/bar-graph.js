@@ -74,7 +74,7 @@ export function updateBarGraph(data) {
             myFunction();
           }
           else if (probability < 0.9) {
-            console.log("stoppar" + urlName);
+            console.log("stoppar");
             myVar = 0;
             myStopFunction();
           }
@@ -86,7 +86,7 @@ var myVar;
 
 function myFunction(){
   console.log("aktiv");
-  myVar = setTimeout(function() { console.log("Skickar till URL!") }, 1000);
+  myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
 }
 function myStopFunction(){
   clearTimeout(myVar);
