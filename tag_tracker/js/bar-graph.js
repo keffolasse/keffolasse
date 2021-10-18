@@ -70,8 +70,9 @@ export function updateBarGraph(data) {
         // set the percent value on the label
         percentElement.innerText = convertToPercent(probability);
         console.log(myVar);
+        urlName = className;
         if (probability > 0.9) {
-            urlName = className;
+
             myFunction();
           }
           else if (probability < 0.9) {
