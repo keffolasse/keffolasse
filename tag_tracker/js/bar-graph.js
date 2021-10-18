@@ -86,7 +86,7 @@ var myVar;
 var urlName;
 function myFunction(){
   console.log("aktiv" + urlName);
-  myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
+  myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName + [className]) }, 1000);
 }
 function myStopFunction(){
   clearTimeout(myVar);
