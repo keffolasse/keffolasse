@@ -68,14 +68,11 @@ export function updateBarGraph(data) {
         barElement.value = probability;
         // set the percent value on the label
         percentElement.innerText = convertToPercent(probability);
-        console.log(myVar);
         if (probability > 0.9) {
           urlName = className;
-
             myFunction();
           }
           else if (probability < 0.9) {
-            console.log("stoppar");
             myVar = 0;
             myStopFunction();
           }
@@ -86,7 +83,8 @@ export function updateBarGraph(data) {
 var myVar;
 var urlName ="";
 function myFunction(){
-  myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
+  myVar = setTimeout(function(){ window.open(urlName,"_self") }, 3000);
+  // myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
 }
 function myStopFunction(){
   clearTimeout(myVar);
