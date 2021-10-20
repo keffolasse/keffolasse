@@ -84,7 +84,7 @@ h2 {
 }
 #graph-wrapper > div > * {
     display: inline-block;
-    width: var(--box-size);
+    width: var(40);
     margin: 0 10px;
 }
 #graph-wrapper > div > :first-child {
