@@ -68,27 +68,27 @@ export function updateBarGraph(data) {
         barElement.value = probability;
         // set the percent value on the label
         percentElement.innerText = convertToPercent(probability);
-        if (probability > 0.9) {
-          urlName = className;
-            myFunction();
-          }
-          else if (probability < 0.9) {
-            myVar = 0;
-            myStopFunction();
-          }
+        // if (probability > 0.9) {
+        //   urlName = className;
+        //     myFunction();
+        //   }
+        //   else if (probability < 0.9) {
+        //     myVar = 0;
+        //     myStopFunction();
+        //   }
     });
 }
 
 
-var myVar;
-var urlName ="";
-function myFunction(){
-  myVar = setTimeout(function(){ window.open(urlName,"_self") }, 3000);
-  // myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
-}
-function myStopFunction(){
-  clearTimeout(myVar);
-}
+// var myVar;
+// var urlName ="";
+// function myFunction(){
+//   myVar = setTimeout(function(){ window.open(urlName,"_self") }, 3000);
+//   // myVar = setTimeout(function() { console.log("Skickar till URL!" + urlName) }, 1000);
+// }
+// function myStopFunction(){
+//   clearTimeout(myVar);
+// }
 // This function converts a decimal number (between 0 and 1)
 // to an integer percent (between 0% and 100%)
 function convertToPercent(num) {
