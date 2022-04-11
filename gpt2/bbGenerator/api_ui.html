@@ -3,37 +3,24 @@
 <style>
   html,
   body {
-    height: 95% !important;
-    margin: 0 !important;
+    height: 100%;
+    overflow: auto;
     background-color: #343434;
   }
 
-  footer {
-    /*max-height: 5% !important;*/
-    padding: 1em !important
-  }
 
-  section {
-    min-height: 95% !important
-  }
 
   .gen-box {
-    background-color: #fff;
-    display: block;
     padding: 1.25rem;
-    color: #4a4a4a;
-    font-size: 1rem;
+    color: #FFFFFF;
+    font-size: 3rem;
     font-weight: 400;
     line-height: 1.25;
   }
 
-  label {
-    color: #ffffff;
-  }
-
   .gen-border {
     height: 0.25em;
-    background-color: #d5d5d5;
+
   }
 
   .gen-box.warning {
@@ -56,20 +43,15 @@
 </style>
 
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI-Generated Text with GPT-2 using Google Cloud Run</title>
   <meta name="title" content="AI-Generated Text with GPT-2 using Google Cloud Run" />
   <meta name="description" content="Generate text from OpenAI's GPT-2 model!" />
-
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-
 <body>
   <section id="main" class="section">
     <div class="container">
@@ -79,56 +61,44 @@
             <div class="field">
               <label class="label">Text Prompt</label>
               <div class="control">
-                <textarea id="prefix" class="textarea" type="text" placeholder="Big Brother is" value="Big Brother is" rows="2"></textarea>
+                <textarea id="prefix" class="textarea" type="text" placeholder="Type start of text here" rows="2"></textarea>
               </div>
-              <p class="help">Starts the generated text with the specified text. <em>(Optional: max 500 characters)</em></p>
+              <p class="help is-white">Starts the generated text with the specified text. <em>(Optional: max 500 characters)</em></p>
             </div>
             <div class="field">
               <label class="label">Generated Text Length</label>
               <div class="control">
                 <input id="length" class="input" type="text" placeholder="Text input" value="20">
               </div>
-              <p class="help">Length of the text in tokens to generate. <em>(max: 1023)</em></p>
+              <p class="help is-white">Length of the text in tokens to generate. <em>(max: 1023)</em></p>
             </div>
 
             <div class="field">
               <label class="label">Temperature</label>
               <div class="control">
-                <input id="temperature" class="input" type="text" placeholder="1.5" value="1.5">
+                <input id="temperature" class="input" type="text" placeholder="1.1" value="1.1">
               </div>
-              <p class="help">Controls the generated text "creativity." <em>(the higher the temperature, the more
-                  creative)</em></p>
+              <p class="help is-white">Controls the generated text "creativity." <em>(the higher the temperature, the more
+                  creative, keep below 1.2)</em></p>
             </div>
             <div class="field">
               <label class="label">Top <em>k</em></label>
               <div class="control">
                 <input id="top_k" class="input" type="text" placeholder="10" value="10">
               </div>
-              <p class="help">Constrains the generated text tokens to the top <em>k</em> possibilities. <em>(set to 0 to
+              <p class="help is-white">Constrains the generated text tokens to the top <em>k</em> possibilities. <em>(set to 0 to
                   disable)</em></p>
             </div>
             <div class="buttons">
               <span class="control">
                 <button type="submit" name="submit" id="generate-text" class="button is-link">
                   <span class="icon">
-                    <i class="fas fa-md fa-pen"></i>
-                  </span><span>Generate Text!</span></button>
+                    <i class="fas fa-md fa-eye"></i>
+                  </span><span>Big Brother Says:</span></button>
               </span>
-
             </div>
           </form>
-          <div id="extra-buttons" class="buttons">
-            <span class="control">
-              <button id="save-image" class="button is-success">
-                <span class="icon">
-                  <i class="fas fa-md fa-save"></i>
-                </span><span>Save Image</span></button>
-            </span>
-            <span class="control">
-              <button id="clear-text" class="button is-danger">
-                <span class="icon">
-                  <i class="fas fa-md fa-trash-alt"></i>
-                </span><span>Clear Texts</span</button> </span> </div> </div> <div id="model-output" class="column">
+          </div> <div id="model-output" class="column">
                   <p id="tutorial" class="subtitle"><em>Generated text will appear here!
                       Use the form to configure GPT-2 and press <strong>Generate Text</strong>
                       to get your own text!
@@ -136,19 +106,13 @@
           </div>
         </div>
       </div>
-
-
   </section>
-
 </body>
-
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
   </script>
-
 <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js">
 </script>
-
 <script type="text/javascript">
   $(function () {
     $('#gen-form').submit(function (e) {
@@ -233,8 +197,5 @@
 
     }
   }
-
-
 </script>
-
 </html>
