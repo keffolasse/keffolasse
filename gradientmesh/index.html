@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>MeshGradient</title>
+        <script src="Gradient.js" ></script>
+    </head>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+        }
+        #gradient-canvas {
+            --gradient-color-1: #F1C0D7;
+            --gradient-color-2: #7090E7;
+            --gradient-color-3: #FF8878;
+            --gradient-color-4: #A574FF;
+            --gradient-color-5: #F1C0D7;
+
+        }
+    </style>
+    <body>
+        <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+        <script>
+            var gradient = new Gradient()
+            gradient.initGradient('#gradient-canvas');
+        </script>
+    </body>
+</html>
